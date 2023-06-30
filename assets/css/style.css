@@ -46,11 +46,11 @@
     "header footer";
 }
 
-  .grid_item_scroll {
+  /* .grid_item_scroll {
     grid-area: grid_item_scroll;
     overflow-y: scroll;
     height: 1200px;
-  }
+  } */
 
 /*Menú cabecera*/
 header {
@@ -334,11 +334,15 @@ figure, .grid_gallery_container, .gallery_pic{
     margin: 10px;
     grid-gap: 10px;
   }
+  .grid_item_scroll{
+    overflow-y: none;
+  }
 
   .header {
-    width: 20vw;
+    min-width: 200px;
     height: auto;
     position: inherit;
+
   }
 
   .banner {
@@ -400,6 +404,7 @@ figure, .grid_gallery_container, .gallery_pic{
   .nav{
     display: flex;
     flex-direction: column;
+    position: fixed;
   }
 
   .nav-menu-item { /*Separación entre items del listado*/
