@@ -228,13 +228,13 @@ figure, .grid_gallery_container, .gallery_pic{
   }
 
   .zn_1, .zn_2,  .zn_3, .zn_4,
-  .zc_1, .zc_4, .zc_5, .zc_6,
+  .zc_1, .zc_5, .zc_6,
   .zs_2, .zs_3, .zs_4, .zs_5, .zs_6  {
     display: none;
   }
 
   .zn5, .zn6,
-  .zc2, .zc3,
+  .zc2, .zc4, .zc3,
   .zs1 {
     display: none;
   }
@@ -319,7 +319,7 @@ figure, .grid_gallery_container, .gallery_pic{
   }
 } 
 
-@media screen and (min-width:769px) and (max-width: 1199px) {
+@media screen and (min-width:769px){
   .grid_container {
     grid-template-columns: 1fr 10fr;
     grid-template-areas:
@@ -337,7 +337,7 @@ figure, .grid_gallery_container, .gallery_pic{
 
   .header {
     width: 20vw;
-    height: 100%;
+    height: auto;
     position: inherit;
   }
 
@@ -351,12 +351,50 @@ figure, .grid_gallery_container, .gallery_pic{
     padding: 0;
     height: 400px;
     transition: left 0.4s;
-
   }
 
-  .gallery_pic_n1, .gallery_pic_n2, .gallery_pic_n3, 
-  .gallery_pic_n4, .gallery_pic_n5, .gallery_pic_n6 {
+  .zn_1, .zn_2,  .zn_3, .zn_4,
+  .zc_1, .zc_5, .zc_6,
+  .zs_2, .zs_3, .zs_4, .zs_5, .zs_6  {
     display: none;
+  }
+
+  .zn5, .zn6,
+  .zc2, .zc4, .zc3,
+  .zs1 {
+    display: none;
+  }
+
+  .zona_norte_uno{ /*CAMPANARIO OK*/
+    grid-row: 1/3;
+    grid-column: 1/3;
+  }
+
+  .zona_norte_cinco{ /*GUANACO *OK*/
+    grid-row: 2/4;
+  }
+
+  .zona_centro_dos{ /*Casa Valparaiso OK*/
+    grid-row:5/7;
+    grid-column: 2/4;
+  }
+
+  .zona_centro_tres{ /*Trole bus OK*/
+    grid-row:4/5;
+    grid-column: 2/4;
+  }
+
+  .zona_centro_cuatro{ /*Enbalse OK*/
+    grid-row:5/7;
+    grid-column: 1/2;
+  }
+
+  .zona_sur_uno{ /*Isla Faro OK*/
+    grid-row: 10/12;
+  }
+  .zona_sur_dos{ 
+    grid-row: 8/10;
+    grid-column: 1/4;
   }
 
   .nav{
@@ -375,6 +413,7 @@ figure, .grid_gallery_container, .gallery_pic{
   .nav-toggle {
     display: none;
   }
+
 } 
 
 /*Slider*/
