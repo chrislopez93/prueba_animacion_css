@@ -46,6 +46,12 @@
     "header footer";
 }
 
+/* .grid_item_scroll {
+  grid-area: grid_item_scroll;
+  overflow-y: scroll;
+  height: 1200px;
+} */
+
 .animation_container{
   height: 80px;
   min-width: 110px;
@@ -57,7 +63,7 @@
   background-position: center;
   background-size: contain;
   background-image: url(../img/gif/0.png);
-  /* -webkit-animation: animation_container 0.1ms infinite; */
+  -webkit-animation: animation 0.1ms infinite;
   animation: animation 2s infinite;
 }
 
@@ -124,14 +130,6 @@
   }
 }
 
-/* .animation_container{
-  width: 100px;
-  height: 80px;
-  animation-name: waiting;
-  animation-iteration-count: infinite;
-  animation-duration: 10s;
-} */
-
 /*Menú cabecera*/
 header {
   grid-area: header;
@@ -144,12 +142,12 @@ header {
   left: 0;
 }
 
+
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 5px;
-  padding-left: 20px;
   padding-right: 20px;
   max-width: 992px;
   margin: 0 auto;
@@ -158,10 +156,6 @@ header {
 .nav-link {
   color: #ffffff;
   text-decoration: none;
-}
-
-.logo-cabecera {
-  height: 87px;
 }
 
 .nav-menu {
@@ -216,6 +210,19 @@ figure,
   height: 100%;
 }
 
+/* .grid_gallery_container{
+  filter: drop-shadow(3px 3px 3px gray)
+} */
+
+/* .gallery_pic{
+  filter: grayscale(100%);
+} */
+
+/* .gallery_pic:hover{
+  filter: grayscale(50%)
+} */
+
+
 /* MEDIAS QUERYS */
 @media screen and (max-width: 568px) {
   .grid_container {
@@ -252,31 +259,16 @@ figure,
     margin: 0;
     position: fixed;
     top: 80px;
-    width: 60%;
+    width: 250px;
     padding: 20px 0;
     height: calc(100% - 60px);
     left: 100%;
     transition: left 0.4s;
   }
 
-  .zn_1,
-  .zn_2,
-  .zn_3,
-  .zn_4,
-  .zn_5,
-  .zn_6,
-  .zc_1,
-  .zc_2,
-  .zc_3,
-  .zc_4,
-  .zc_5,
-  .zc_6,
-  .zs_1,
-  .zs_2,
-  .zs_3,
-  .zs_4,
-  .zs_5,
-  .zs_6 {
+  .zn_1,.zn_2,.zn_3,.zn_4,.zn_5,.zn_6,
+  .zc_1,.zc_2,.zc_3,.zc_4,.zc_5,.zc_6,
+  .zs_1,.zs_2,.zs_3,.zs_4,.zs_5,.zs_6 {
     display: none;
   }
 
@@ -288,10 +280,6 @@ figure,
   .nav-menu-link:active {
     background: none;
     background-color: #342cc4;
-  }
-
-  .logo-cabecera {
-    height: 80px;
   }
 
   .nav-toggle {
@@ -322,26 +310,13 @@ figure,
     grid-gap: 10px;
   }
 
-  .zn_1,
-  .zn_2,
-  .zn_3,
-  .zn_4,
-  .zc_1,
-  .zc_5,
-  .zc_6,
-  .zs_2,
-  .zs_3,
-  .zs_4,
-  .zs_5,
-  .zs_6 {
+  .zn_1,.zn_2,.zn_3,.zn_4,.zc_1,.zc_5,.zc_6,
+  .zs_2,.zs_3,.zs_4,.zs_5,.zs_6 {
     display: none;
   }
 
-  .zn5,
-  .zn6,
-  .zc2,
-  .zc4,
-  .zc3,
+  .zn5,.zn6,
+  .zc2,.zc4,.zc3,
   .zs1 {
     display: none;
   }
@@ -397,7 +372,7 @@ figure,
     margin: 0;
     position: fixed;
     top: 80px;
-    width: 60%;
+    min-width: 200px;
     padding: 20px 0;
     height: calc(100% - 60px);
     left: 100%;
@@ -412,10 +387,6 @@ figure,
   .nav-menu-link:active {
     background: none;
     background-color: #342cc4;
-  }
-
-  .logo-cabecera {
-    height: 80px;
   }
 
   .nav-toggle {
@@ -456,7 +427,7 @@ figure,
   }
 
   .header {
-    min-width: 215px;
+    min-width: 225px;
     height: auto;
     position: inherit;
   }
@@ -499,6 +470,7 @@ figure,
   width: 100%;
   height: calc(85vh - 80px);
   background-color: #f5f5f5;
+  /* filter: grayscale(100%); */
   background-size: cover;
   background-position: center;
   transition: all 0.5s ease-in-out;
@@ -506,6 +478,10 @@ figure,
   -webkit-animation: banner 40s infinite linear;
   animation: banner 40s infinite linear;
 }
+
+/* .banner:hover{
+  filter: grayscale(0%);
+} */
 
 .banner-content {
   margin: 0;
