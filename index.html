@@ -9,6 +9,7 @@
     <meta name="google-site-verification" content="A8xtxM8jfPkOxnG-kk4YmiaOf17RdAkcN0mLBbKbHD4" />
     <link rel="shortcut icon" type="image/jpg" href="./files/pics/favicon.png" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <limk rel="shortcut icon" type="image/jpg" href="./assets/img/ico.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Fasthand&family=Montserrat&display=swap"
@@ -35,7 +36,7 @@
             </nav>
         </header>
         <main class="grid_item_scroll">
-            <section class="banner"><!-- Slider-->
+            <section class="banner" id="inicio"><!-- Slider-->
                 <div class="banner-content">
                     <h1>Travel Time</h1>
                     <p class="handmade">Viajar es soñar despierto...</p>
@@ -43,7 +44,7 @@
             </section>
             <section class="grid_item_gallery">
                 <div class="grid_item_texto grid_titulo_norte">
-                    <h2>Zona Norte</h2>
+                    <h2 id="norte">Zona Norte</h2>
                     <p>El norte de Chile es una región caracterizada por su árido paisaje desértico y su clima
                         extremadamente seco. La flora se compone principalmente de especies adaptadas a estas
                         condiciones, como los cactus y las plantas suculentas. En cuanto a la fauna, se pueden encontrar
@@ -96,7 +97,7 @@
                     </figure>
                 </div>
                 <div class="grid_item_texto grid_titulo_central">
-                    <h2>Zona central</h2>
+                    <h2 id="centro">Zona central</h2>
                     <p>La zona central de Chile es una región que se extiende desde la Región de Coquimbo hasta la
                         Región del Maule. Se caracteriza por un clima mediterráneo y una diversidad de paisajes, que van
                         desde valles y colinas hasta bosques y playas.</p>
@@ -156,7 +157,7 @@
                     </figure>
                 </div>
                 <div class="grid_item_texto grid_titulo_sur">
-                    <h2>Zona sur</h2>
+                    <h2 id="sur">Zona sur</h2>
                     <p>La zona sur de Chile abarca desde la Región de los Ríos hasta la Región de Magallanes y de la
                         Antártica Chilena. Se caracteriza por su clima templado y su exuberante vegetación, así como por
                         una gran diversidad de ecosistemas.</p>
@@ -211,10 +212,9 @@
                     </figure>
                 </div>
             </section>
-
         </main>
         <footer>
-            <ul class="footer_menu">
+            <ul class="footer_menu" id="contacto">
                 <li><a href="#"><i class="fa fa-brands fa-facebook fa-2x"></i></a></li>
                 <li><a href="#"><i class="fa fa-brands fa-github fa-2x"></i></a></li>
                 <li><a href="#"><i class="fa fa-brands fa-twitter fa-2x"></i></a></li>
@@ -223,6 +223,12 @@
                 <li><a href="#"><i class="fa fa-brands fa-linkedin fa-2x"></i></a></li>
                 <li><a href="#"><i class="fa fa-brands fa-whatsapp fa-2x"></i></a></li>
             </ul>
+            <div class="footer_info">
+                <h3>Información de contacto</h3>
+                <p>Fono: +56 9 9999 9999</p>
+                <p>Atención a clientes: Lun-sáb 09:00 - 19:30hrs.</p>
+                <p>Visítanos: Av. Costanera 9999, Santiago, Chile.</p>
+            </div>
             <script src="https://kit.fontawesome.com/63c5590411.js" crossorigin="anonymous"></script>
             <script defer src="./assets/js/index.js"></script>
         </footer>
