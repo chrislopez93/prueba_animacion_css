@@ -2,22 +2,26 @@
   margin: 0;
   box-sizing: border-box;
   padding: 0;
+  font: var(--font-family-site);
 }
 
 :root {
   /*----TIPO FUENTE, TAMAÑO Y GROSOR FUENTE GENERAL----*/
-  --font-family-site: "Montserrat", sans-serif;
+  --font-family-site: 'Montserrat', sans-serif;
   --font-size-site: 18px;
   --font-weight-site: 300;
   /*----TIPO FUENTE, TAMAÑO Y GROSOR FUENTE GENERAL----*/
 
   /*----TIPO FUENTE Y TAMAÑO H1----*/
-  --font-family-h1: Zen dots;
-  --font-size-h1: 100px;
+  --font-family-h1: 'Caprasimo', cursive;
+  --font-size-h1: 90px;
+  --font-family-handmade: 'Fasthand', cursive;
+  --font-size-handmade:2rem; 
   /*----TIPO FUENTE Y TAMAÑO H1----*/
 
   /*----TAMAÑO FUENTE Y MARGENES H2----*/
-  --font-size-h2: 35px;
+  --font-family-h2: 'Caprasimo', cursive;
+  --font-size-h2: 2.5rem;
   --margin-title-h2: 20px 20px 10px 20px;
   /*----TAMAÑO FUENTE Y MARGENES H2----*/
 
@@ -46,11 +50,16 @@
     "header footer";
 }
 
-/* .grid_item_scroll {
-  grid-area: grid_item_scroll;
-  overflow-y: scroll;
-  height: 1200px;
-} */
+.grid_container h2{
+  font-family: var(--font-family-h2);
+  margin-bottom: 10px;
+  font-size: var(--font-size-h2);
+}
+
+.grid_container p, li{
+  font-family: var(--font-family-site);
+  text-align: justify;
+}
 
 .animation_container{
   height: 80px;
@@ -161,7 +170,6 @@ header {
 
 .nav-menu {
   display: flex;
-  /* margin-right: 30px; */
   list-style: none;
   background-color: var(--color-bg-darkmustard);
 }
@@ -578,11 +586,16 @@ figure,
 .banner-content h1 {
   margin: 0;
   padding: 0;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   font-size: var(--font-size-h1);
   text-align: center;
   font-family: var(--font-family-h1);
   text-transform: uppercase;
+}
+
+.banner-content p{
+  font-family: var(--font-family-handmade);
+  font-size: var(--font-size-handmade);
 }
 
 .banner-content a {
