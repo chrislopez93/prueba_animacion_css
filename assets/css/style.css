@@ -163,7 +163,7 @@ header {
   margin: 0 auto;
 }
 
-.nav-link {
+.nav-link{
   color: #ffffff;
   text-decoration: none;
 }
@@ -208,10 +208,6 @@ header {
   display: none;
 }
 
-.ico {
-  margin: 5px;
-}
-
 figure,
 .grid_gallery_container,
 .gallery_pic {
@@ -230,10 +226,16 @@ figure,
   flex-direction: column;
 }
 
+.grid_item_gallery{
+  grid-gap: 20px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 25px;
+}
+
 .grid_titulo_norte{
   grid-column: 1/4;
   grid-row: 1;
-
 }
 
 .grid_titulo_central{
@@ -258,7 +260,7 @@ figure,
   -webkit-filter: grayscale(0%);
   filter: grayscale(0%);
   transition: 1s;
-  transform: scale(1.02) translateY(-1%);
+  transform: scale(1.01) translateY(-1%);
 }
 
 
@@ -290,6 +292,12 @@ figure,
 
   .banner {
     max-height: 450px;
+  }
+
+  .banner-content h1 {
+
+    padding-bottom: 10px;
+    font-size: var(--font-size-h1);
   }
 
   .nav-menu {
@@ -345,8 +353,6 @@ figure,
   .grid_item_gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin: 10px;
-    grid-gap: 10px;
   }
 
   .zn_1,.zn_2,.zn_3,.zn_4,.zc_1, .zc_4, .zc_5,.zc_6,
@@ -501,8 +507,6 @@ figure,
   .grid_item_gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin: 10px;
-    grid-gap: 10px;
   }
   .grid_item_scroll {
     overflow-y: none;
@@ -530,10 +534,101 @@ figure,
     transition: left 0.4s;
   }
 
-  .zn_1,.zn_2,.zn_3,.zn_4,.zn_5,.zn_6,
+  .zn_1,.zn_2,.zn_3,.zn_4,
   .zc_1,.zc_2,.zc_3,.zc_4,.zc_5,.zc_6,
   .zs_1,.zs_2,.zs_3,.zs_4,.zs_5,.zs_6 {
     display: none;
+  }
+
+  .zn5, .zn6{
+    display: none;
+  }
+
+  .zona_norte_uno {
+    /*CAMPANARIO OK*/
+    grid-row: 2/3;
+    grid-column: 1/3;
+  }
+
+
+  .zona_norte_cuatro{
+    grid-column: 2/4
+  }
+
+  .zona_norte_seis {
+    /*GUANACO *OK*/
+    grid-row: 2/4;
+  }
+
+  .zona_norte_cinco {
+    /*GUANACO *OK*/
+    grid-row: 4/5;
+    grid-column: 1/2;
+  }
+
+
+  .zona_centro_uno {
+    /*Casa Valparaiso OK*/
+    grid-row: 7;
+    grid-column: 3/4;
+  }
+
+  .zona_centro_dos {
+    /*Casa Valparaiso OK*/
+    grid-row: 6/7;
+    grid-column: 2/4;
+  }
+
+  .zona_centro_tres {
+    /*Trole bus OK*/
+    grid-row: 8;
+    grid-column: 1/4;
+  }
+
+  .zona_centro_cuatro {
+    /*Enbalse OK*/
+    grid-row: 6;
+    grid-column: 1/2;
+  }
+
+  .zona_centro_cinco {
+    grid-row: 7;
+    grid-column: 1/2;
+  }
+
+  .zona_centro_seis {
+    grid-row: 7;
+    grid-column: 2/3;
+  }
+
+  .zona_sur_uno {
+    /*Isla Faro OK*/
+    grid-row: 12/14;
+    grid-column: 1/2;
+  }
+  .zona_sur_dos {
+    grid-row: 11/14;
+    grid-column: 2/4;
+  }
+
+  .zona_sur_tres {
+    grid-row: 10/11;
+    grid-column: 2/3;
+  }
+
+  .zona_sur_cuatro {
+    grid-row: 11;
+    grid-column: 1/2;
+  }
+
+  .zona_sur_cinco {
+    grid-row: 10;
+    grid-column: 3/4;
+  }
+
+  .zona_sur_seis {
+    grid-row: 10;
+    grid-column: 1/2;
   }
 
   .nav {
@@ -587,7 +682,7 @@ figure,
   margin: 0;
   padding: 0;
   padding-bottom: 10px;
-  font-size: var(--font-size-h1);
+  font-size: 65px;
   text-align: center;
   font-family: var(--font-family-h1);
   text-transform: uppercase;
@@ -740,20 +835,34 @@ figure,
 /*Footer*/
 footer {
   grid-area: footer;
-  padding: 10px 0px 10px 0px;
-  text-align: center;
+  height: 120px;
+  width: 100%;
   background-color: var(--color-bg-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-footer p {
-  color: #f5f5f5;
-}
-footer a {
-  text-decoration: none;
-  color: #f5f5f5;
+.footer_menu{
+  display: flex;
+  flex-direction: row;
 }
 
-footer a:hover {
-  background-color: var(--color-bg-darkmustard);
-  border-radius: 5px;
+.footer_menu li{
+  margin: 15px;
+  list-style: none;
+}
+
+.fa{
+  color: #ffffff;
+}
+
+.fa-2x:hover{
+  animation: temblar 0.1s 3;
+}
+
+@keyframes temblar{
+  0%  { -webkit-transform:rotateZ(-15deg); }
+  50% { -webkit-transform:rotateZ( 0deg) scale(1.4); }
+  100%{ -webkit-transform:rotateZ( 15deg); }
 }
